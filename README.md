@@ -60,8 +60,7 @@ ligne 80 à 84 --> on définit un style par défaut au container via des propri�
 Je m'imagine un processus de création en plusieurs étapes afin d'avancer plus sereinement :
 - construire un formulaire basique avec des champs controlés
 - gérer la redirection et le reset du formulaire
-- vérifier les champs email et téléphone
 - afficher un message en cas d'erreur de saisie
-- rendre tous les champs obligatoire sauf téléphone
+- rendre tous les champs obligatoires sauf téléphone
 
 Et c'est parti !
