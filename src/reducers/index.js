@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import {
-  UPDATE_USER_INFO,
+  UPDATE_USER_INFO,RESET_USER_INFO,
 } from 'src/actions/form';
 
 
@@ -19,6 +19,10 @@ export default (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+      };
+      case RESET_USER_INFO:
+      return {
+        
       };
     default:
       return state;

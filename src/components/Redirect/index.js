@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 import './redirect.scss';
 
 // == Composant
-const Redirect = ({firstname,lastname,email,phone}) => 
+const Redirect = ({firstname,lastname,email,phone,resetData}) => 
 { 
   const history = useHistory();
 
@@ -16,6 +16,7 @@ const Redirect = ({firstname,lastname,email,phone}) =>
   {
     e.preventDefault();
     history.push("/");
+    {resetData()};
   }
 
   return (
