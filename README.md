@@ -15,7 +15,7 @@ On va se servir d'hooks afin de faire circuler les informations :
 
 lignes 14 à 17 --> On décrit les props du composant
 userEventList sera un objet
-selectEventList sera une fonction qui est REQUISE --> une erreur sera déclenchée si cette props n'est pas assignée
+selectEventList sera une fonction qui est REQUISE --> un warning sera déclenché si cette props n'est pas assignée
 
 ligne 28 --> on assigne aux variables userEventList & selectEventList leurs valeurs similaires aux props
 
