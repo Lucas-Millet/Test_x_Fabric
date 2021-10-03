@@ -1,7 +1,7 @@
 // == Import npm
 import React from 'react';
 import { useHistory } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 // == Import
 
@@ -29,13 +29,13 @@ const Accueil = ({firstname,lastname,email,phone,changeField}) =>
 
       <form id="survey" onSubmit={handleSubmit}>
         <label>Prénom</label>
-        <Field value={firstname} type="text" name="firstname" placeholder="votre prénom" onChange={changeField}  />
+        <Field value={firstname} type="text" name="firstname" placeholder="votre prénom" onChange={changeField} isRequired={true}  />
         
         <label>Nom</label>
-        <Field value={lastname} type="text" name="lastname" placeholder="votre nom" onChange={changeField}  />
+        <Field value={lastname} type="text" name="lastname" placeholder="votre nom" onChange={changeField} isRequired={true} />
 
         <label>Email</label>
-        <Field value={email} type="text" name="email" placeholder="votre email" onChange={changeField}  />
+        <Field value={email} type="email" name="email" placeholder="votre email" onChange={changeField} isRequired={true}  />
         
         <label>Télephone</label>
         <Field value={phone} type="text" name="phone" placeholder="votre téléphone" onChange={changeField}  />
@@ -47,6 +47,14 @@ const Accueil = ({firstname,lastname,email,phone,changeField}) =>
     </div>
   );
 }
+Accueil.propTypes = {
+  firstname: PropTypes.string,
+  lastname: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  changeField: PropTypes.func.isRequired,
+
+};
 
 // == Export
 export default Accueil;

@@ -1,7 +1,7 @@
 // == Import npm
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 // == Import
 
@@ -32,5 +32,13 @@ const Redirect = ({firstname,lastname,email,phone,resetData}) =>
   );
 }
 
+Redirect.propTypes = {
+  firstname: PropTypes.string,
+  lastname: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  resetData: PropTypes.func.isRequired,
+
+};
 // == Export
 export default Redirect;

@@ -12,6 +12,7 @@ const Field = ({
   name,
   placeholder,
   onChange,
+  isRequired,
 }) => {
   const handleChange = (evt) => {
     onChange(evt.target.value, name);
@@ -31,6 +32,7 @@ const Field = ({
         className="field-input"
         placeholder={placeholder}
         name={name}
+        required={isRequired}
       />
 
       <label
@@ -49,12 +51,14 @@ Field.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  isRequired: PropTypes.bool.isRequired,
 };
 
 // Valeurs par défaut pour les props
 Field.defaultProps = {
   value: '',
   type: 'text',
+  isRequired : false,
 };
 
 // == Export

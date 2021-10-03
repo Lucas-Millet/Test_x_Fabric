@@ -6,10 +6,10 @@ import {
 
 
 const initialState = {
-  firstname: 'lucas',
-  lastname: 'zozo',
-  email: 'lucaslucas@lucas.com',
-  phone: '0102030405',
+  firstname: '',
+  lastname: '',
+  email: '',
+  phone: '',
  
 };
 
